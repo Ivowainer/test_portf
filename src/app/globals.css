@@ -8,14 +8,6 @@
     --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
-}
-
 body {
     position: relative;
     height: 100%;
@@ -43,3 +35,45 @@ body {
   justify-content: center;
   align-items: center;
 }*/
+
+.swiper-slide {
+    border: none !important;
+    outline: none !important;
+}
+.swiper-container .swiper-slide {
+    border: none !important;
+    outline: none !important;
+}
+.swiper-slide {
+    box-shadow: none !important;
+}
+
+/* Establecer el color de fondo de los bullets inactivos en gris */
+.swiper-pagination-bullet {
+    background-color: #808080; /* Color gris */
+    border: 2px solid #48BB78; /* Color emerald-500 para el borde */
+}
+   
+/* Estilo para el bullet activo */
+.swiper-pagination-bullet-active {
+    background-color: #48BB78;
+    border: 2px solid #48BB78;
+    animation: fillAndEmpty 4s infinite;
+}
+   
+/* Animación de llenado y vaciado para el bullet activo */
+@keyframes fillAndEmpty {
+    0% {
+        background-color: transparent;
+        border-color: #48BB78;
+    }
+    50% {
+        background-color: #48BB78;
+        border-color: #48BB78;
+    }
+    100% {
+        background-color: transparent;
+        border-color: #48BB78;
+    }
+}
+   
